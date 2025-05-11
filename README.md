@@ -19,6 +19,7 @@
 
   * `Visual Studio 2012`
   * `Windows SDK`
+  * 设置环境变量 `VS110COMNTOOLS`
 
 ---
 
@@ -26,26 +27,19 @@
 
 ### ✅ 编译步骤：
 
-1. 设置 Windows 环境变量：
-
-   ```cmd
-   变量名(N)： VS110COMNTOOLS   
-   变量值(V)： E:\VS2012\Common7\Tools\
-   ```
-
-2. 进入 `scripts` 目录：
+1. 进入 `scripts` 目录：
 
    ```cmd
    cd scripts
    ```
 
-3. 执行编译脚本：
+2. 执行编译脚本：
 
    ```cmd
    compile.bat x64
    ```
 
-4. 编译成功后，`executables_*` 目录下应生成以下可执行文件：
+3. 编译成功后，`executables_*` 目录下应生成以下可执行文件：
 
    * `usacEnc.exe`（编码器）
    * `usacDec.exe`（解码器）
