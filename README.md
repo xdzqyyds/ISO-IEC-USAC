@@ -81,13 +81,18 @@ compile.bat co GIT        # 使用 GIT 检出依赖
 
 ## 🎧 编码器说明（`usacEnc.exe`）
 
+### 🎧 编码器参数说明
+
+对于立体声输入和比特率<64kbps的情况，MPEG Surround立体声编码会自动激活。
+对于立体声输入和比特率>=64kbps的情况，会激活离散立体声编码。
+
 ### 📌 示例：
 
 ```bash
 usacEnc -if input.wav -of encoded.mp4 -br 96000 -sbrRatioIndex 3 -nodrc
 ```
 
-> 输入文件为 `input.wav`，输出 `encoded.mp4`，使用 96 kbps 比特率，2:1 SBR 1024，禁用 DRC。
+> 输入文件为 `input.wav`，输出 `encoded.mp4`，使用 96 kbps 比特率，2:1 SBR 1024，禁用 DRC，此时只依赖`usacEnc.exe`这一个可执行文件
 
 ### 🔣 参数类型说明：
 
@@ -138,10 +143,10 @@ usacEnc -if input.wav -of encoded.mp4 -br 96000 -sbrRatioIndex 3 -nodrc
 ### 📌 示例：
 
 ```bash
-usacDec -if encoded.mp4 -of output.wav -bitdepth 16 -nodrc -cpo 0
+usacDec -if encoded.mp4 -of output.wav -bitdepth 16 -nodrc -cpo 0 -v
 ```
 
-> 解码 `encoded.mp4` 到 `output.wav`，设置输出为 16 位 PCM，禁用 DRC，完整输出。
+> 解码 `encoded.mp4` 到 `output.wav`，设置输出为 16 位 PCM，禁用 DRC，完整输出，此时依赖`usacDec.exe``wavCutterCmdl.exe`这两个可执行文件，`drcToolDecoder.exe`需存在，但内容可为空
 
 ### 🔣 参数类型说明：
 
