@@ -84,7 +84,7 @@ compile.bat co GIT        # 使用 GIT 检出依赖
 ### 📌 示例：
 
 ```bash
-usacEnc -if input.wav -of encoded.mp4 -br 96000 -sbrRatioIndex 3 -nodrc -vv
+usacEnc -if input.wav -of encoded.mp4 -br 96000 -sbrRatioIndex 3 -nodrc
 ```
 
 > 输入文件为 `input.wav`，输出 `encoded.mp4`，使用 `96 kbps` 比特率，`2:1 SBR 1024`，禁用 `DRC`，此时只依赖 `usacEnc.exe` 这一个可执行文件
